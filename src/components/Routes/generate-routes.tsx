@@ -10,7 +10,7 @@ const generateFlattenRoutes = (routes: { [x: string]: any; routes: any; }[]):any
     }))
 }
  const renderRoutes = (mainRoutes:any[]) => {
-    const Routes = ({isAuthorized}:{isAuthorized:boolean}) => {
+     return ({isAuthorized}:{isAuthorized:boolean}) => {
         const layouts = mainRoutes.map(({ layout: Layout, routes }, index) => {
             const subRoutes = generateFlattenRoutes(routes);
             return (
@@ -28,7 +28,6 @@ const generateFlattenRoutes = (routes: { [x: string]: any; routes: any; }[]):any
         });
         return <ReactRoutes>{layouts}</ReactRoutes>;
     }
-    return Routes;
 }
 
 export default renderRoutes

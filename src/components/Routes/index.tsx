@@ -9,7 +9,6 @@ import List from "../../pages/list";
 import Detail from "../../pages/detail";
 import renderRoutes from "./generate-routes";
 import {Navigate} from "react-router-dom";
-import home from "../../pages/home";
 
 export const routes = [
     {
