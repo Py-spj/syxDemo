@@ -1,12 +1,10 @@
-import React from 'react';
+import React  from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-     1111
-    </div>
-  );
-}
+import {Routes} from "./components/Routes";
+const App: React.FC = () => {
+    return (
+       <Routes isAuthorized={true}/>
+    );
+};
 
 export default App;
