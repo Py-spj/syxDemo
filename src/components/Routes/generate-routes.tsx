@@ -18,7 +18,7 @@ const generateFlattenRoutes = (routes: { [x: string]: any; routes: any; }[]):any
                     <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
                         {subRoutes.map(({ component: Component, path, name }) => {
                             return (
-                                Component && path && (<Route key={name} element={Component} path={path} />)
+                                Component && path && (<Route key={name} element={<Component />} path={path} />)
 
                             )
                         })}
