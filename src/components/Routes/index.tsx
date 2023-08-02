@@ -6,7 +6,7 @@ import MainLayout from "../MainLayout";
 import Login from "../../pages/login";
 import Home from "../../pages/home";
 import List from "../../pages/list";
-import Detail from "../../pages/detail";
+import ReactDnd from "../../pages/reactDnd";
 import renderRoutes from "./generate-routes";
 import {Navigate} from "react-router-dom";
 const Redirect = ()=>{
@@ -41,6 +41,12 @@ export const routes = [
                 path: '/home'
             },
             {
+                name: 'reactDnd',
+                title: 'reactDnd',
+                component: ReactDnd,
+                path: '/reactDnd'
+            },
+            {
                 name: 'users',
                 title: 'users',
                 hasSiderLink: true,//表示目标路由是否应该被呈现为侧边栏的导航链接。当设置为true时，该路由将出现在侧边栏内
@@ -52,13 +58,6 @@ export const routes = [
                         component: List,
                         path: '/users/list'
                     },
-                    {
-                        name: 'detail',
-                        title: 'detail',
-                        hasSiderLink: true,
-                        component: Detail,
-                        path: '/users/detail'
-                    }
                 ]
             }
         ]
