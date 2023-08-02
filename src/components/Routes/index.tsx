@@ -5,9 +5,11 @@ import MainLayout from "../MainLayout";
 // Pages
 import Login from "../../pages/login";
 import Home from "../../pages/home";
-import list from "../../pages/list";
-import detail from "../../pages/detail";
+import List from "../../pages/list";
+import Detail from "../../pages/detail";
 import renderRoutes from "./generate-routes";
+import {Navigate} from "react-router-dom";
+import home from "../../pages/home";
 
 export const routes = [
     {
@@ -16,7 +18,7 @@ export const routes = [
             {
                 name: 'login',
                 title: 'Login page',
-                component: Login,
+                component: <Login />,
                 path: '/login',
                 isPublic: true,//: 一个Boolean prop，表示该页面是公开的还是需要登录的。当设置为 "true "时，该页面将以匿名模式访问
             }
@@ -28,7 +30,13 @@ export const routes = [
             {
                 name: 'home',
                 title: 'Home page',
-                component: Home,
+                path: '/',
+                component: <Navigate to="/home"/>,
+            },
+            {
+                name: 'home',
+                title: 'Home page',
+                component: <Home />,
                 path: '/home'
             },
             {
@@ -40,14 +48,14 @@ export const routes = [
                         name: 'list',
                         title: 'List',
                         hasSiderLink: true,
-                        component: list,
+                        component: <List />,
                         path: '/users/list'
                     },
                     {
                         name: 'detail',
                         title: 'detail',
                         hasSiderLink: true,
-                        component: detail,
+                        component: <Detail />,
                         path: '/users/detail'
                     }
                 ]
