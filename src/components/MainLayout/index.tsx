@@ -1,8 +1,9 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+// import {Outlet} from "react-router-dom";
+import Main from "./Main";
 const  MainLayout = ()=>{
     return (
-        <Outlet />
+       <Main />
     )
 }
 

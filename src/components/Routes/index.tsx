@@ -9,6 +9,7 @@ import List from "../../pages/list";
 import ReactDnd from "../../pages/reactDnd";
 import renderRoutes from "./generate-routes";
 import {Navigate} from "react-router-dom";
+import Detail from "../../pages/detail";
 const Redirect = ()=>{
     return  <Navigate to="/home"/>
 }
@@ -28,7 +29,7 @@ export const routes = [
     {
         layout: MainLayout,
         routes: [
-            {
+             {
                 name: 'home',
                 title: 'Home page',
                 path: '/',
@@ -47,16 +48,17 @@ export const routes = [
                 path: '/reactDnd'
             },
             {
-                name: 'users',
-                title: 'users',
-                hasSiderLink: true,//表示目标路由是否应该被呈现为侧边栏的导航链接。当设置为true时，该路由将出现在侧边栏内
+                name: 'list',
+                title: 'List',
+                hasSiderLink: true,
+                component: List,
                 routes: [
                     {
-                        name: 'list',
-                        title: 'List',
+                        name: 'detail',
+                        title: 'detail',
                         hasSiderLink: true,
-                        component: List,
-                        path: '/users/list'
+                        component: Detail,
+                        path: '/list/detail'
                     },
                 ]
             }
