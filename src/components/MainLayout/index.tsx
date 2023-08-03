@@ -45,13 +45,15 @@ export default () => {
         >
             <ProLayout
                 siderWidth={216}
+                title={'商'}
+                logo={false}
                 {...defaultProps}
                 location={{
                     pathname,
                 }}
                 avatarProps={{
                     src: 'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
-                    title: '七妮妮',
+                    title: '商',
                     size: 'small',
                 }}
                 actionsRender={(props) => {
@@ -65,7 +67,6 @@ export default () => {
                 menuItemRender={(item, dom) => (
                     <div
                         onClick={() => {
-                            console.log('item.path:', item.path)
                             navigate(item.path || '/')
                             setPathname(item.path || '/home');
                         }}
