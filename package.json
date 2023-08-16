@@ -25,7 +25,11 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.196",
-    "react-scripts": "5.0.1"
+    "postcss": "latest",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
